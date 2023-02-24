@@ -1,6 +1,9 @@
-<h1>Lists</h1>
-
-    <% @lists.each do |list| %>
-      <div><%= link_to list.name, list_path(list) %> | <%= link_to "🗑️", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></div>
-    <% end %>
-  <%= link_to "New list", new_list_path, class:"btn btn-secondary"%></div>
+<div class="cards">
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list) do%>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://media.istockphoto.com/id/1307141189/fr/photo/un-train-%C3%A0-pile-%C3%A0-combustible-%C3%A0-hydrog%C3%A8ne.jpg?s=2048x2048&w=is&k=20&c=hMPfwPUnQquVoyrmOLtGXlv5Q7w57KyOmhOPJQUO1fY=)">
+        <%= list.name %>
+      </div>
+      <% end %>
+  <% end %>
+</div>

@@ -6,11 +6,8 @@
       <% else %>
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
       <% end %>
-
-          <%= list.name.upcase %>
-        </div>
-      <%= link_to "delete", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        <%= list.name.upcase %>
+      </div>
       <% end %>
-
   <% end %>
 </div>

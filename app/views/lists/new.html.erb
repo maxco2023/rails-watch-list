@@ -1,7 +1,7 @@
 <h1>New list</h1>
 <%= simple_form_for [@list] do |f| %>
   <%= f.input :name %>
-  <%= f.input :img_url %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit "Submit a new list", class: "btn btn-primary" %> <%= link_to "Go back to full list", lists_path, class:"btn btn-secondary" %>
 
 <% end %>

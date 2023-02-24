@@ -1,14 +1,16 @@
 <h1><%= @list.name %></h1>
 <br>
-  <% @list.bookmarks.each do |bookmark| %>
-      <div><img src="<%= bookmark.movie.poster_url %>" width="200px"></div>
-      <p>
-      <div><%= bookmark.movie.title %></div>
-      <p>
-      <div><%= bookmark.comment %></div>
-      <p>
-      <div><%= link_to "delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn-delete" %></div>
-  <% end %>
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="cards">
+          <div class="cards-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= bookmark.movie.poster_url %>)">
+            </div>
+            <div><%= bookmark.movie.title %></div>
+            <div><%= bookmark.comment %></div>
+            <div><%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-warning" %></div>
+      </div>
+      <br>
+    <% end %>
 <br>
 <%= link_to "Add a movie with comment", new_list_bookmark_path(@list), class:"btn btn-primary" %>
 <%= link_to "Go back to full list", lists_path, class:"btn btn-secondary" %>
+<%= link_to "Delete this list", list_path(@list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-warning" %>

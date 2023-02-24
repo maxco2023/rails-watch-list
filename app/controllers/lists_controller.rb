@@ -32,6 +32,9 @@ class ListsController < ApplicationController
 
   def destroy
     @list = List.find(params[:id])
+    if @list.photo.attached?
+    @list.photo.purge
+    end
     if @list.destroy
       redirect_to lists_path
     else

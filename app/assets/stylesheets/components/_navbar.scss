@@ -12,5 +12,21 @@
 }
 
 .form {
-  width: 600px;
+  width: 400px;
+}
+
+.controls{
+  border-radius: 20px;
+  margin: 0px -38px;
+}
+
+.items:hover{
+  text-align: center;
+  color:white;
+  background-color: grey;
+  opacity: 0.6;
+  border-radius: 20px;
+  a{
+    color:white;
+  }
 }

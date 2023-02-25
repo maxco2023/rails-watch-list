@@ -11,13 +11,20 @@
 @import "components/index";
 @import "pages/index";
 
+html{
+height: 100%;
+}
+
 h1{
   padding-top: 10px;
+  text-align: center;
 }
 
 body{
   position: relative;
-  height: 100%;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 // banner
@@ -37,9 +44,9 @@ body{
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 40px;
   color: white;
-  opacity: .7;
+  opacity: 1;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
@@ -151,6 +158,18 @@ body{
   transition: opacity 0.3s ease;
 }
 
+.btn-ghost3 {
+  color: #4A4A4A;
+  background-color: white;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+
 .btn-ghost:hover {
   opacity: 1;
   border: 1px solid #d39797;
@@ -172,16 +191,23 @@ body{
   color:white
 }
 
+.btn-ghost3:hover {
+  opacity: 1;
+  border: 1px solid #d39797;
+  background-color: #d39797;
+  color:white
+}
+
 .btn-flat {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #670BFF;
+  background: #5898f2;
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: #4D04C4;
+  background: #4e40e7;
   color: white;
 }
 
@@ -216,14 +242,14 @@ body{
   border: none;
   background: transparent;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   padding-top: 20px;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   padding-top:20px;
 }
@@ -255,7 +281,8 @@ body{
 .card-trip {
   overflow: hidden;
   position:relative;
-  height: 420px;
+  height: 380px;
+  border-radius: 15px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
@@ -287,11 +314,10 @@ body{
 text-align: justify;
 }
 
-.card-trip .card-trip-infos div{
+.card-trip .div1{
   position: absolute;
-  right: 65px;
-  bottom: 5px;
-  width: 40px;
+  right: 2%;
+  bottom: 178px;
 }
 
 .card-trip-infos .card-trip-user {

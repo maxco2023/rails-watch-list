@@ -2,6 +2,6 @@
 <%= simple_form_for [@list] do |f| %>
   <%= f.input :name %>
   <%= f.input :photo, as: :file %>
-  <%= f.submit "Submit a new list", class: "btn btn-primary" %> <%= link_to "Go back to full list", lists_path, class:"btn btn-secondary" %>
+  <%= f.submit "Submit a new list", class: "btn btn-ghost1" %> <%= link_to "Go back to full list", lists_path, class:"btn btn-ghost2" %>
 
 <% end %>

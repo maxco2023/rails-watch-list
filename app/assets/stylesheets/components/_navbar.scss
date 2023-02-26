@@ -12,12 +12,12 @@
 }
 
 .form {
+  height: 40px;
   width: 400px;
 }
 
 .controls{
   border-radius: 20px;
-  margin: 0px -38px;
 }
 
 .items:hover{
@@ -26,6 +26,8 @@
   background-color: grey;
   opacity: 0.6;
   border-radius: 20px;
+  transition: background 0.5s ease;
+
   a{
     color:white;
   }

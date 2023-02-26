@@ -260,7 +260,7 @@ border-radius: 20px;
 
 .btn-flat {
   height: 40px;
-  margin: 297px;
+  margin: 497px;
   position: absolute;
   color: white;
   padding: 6px 24px;
@@ -391,9 +391,10 @@ border-radius: 20px;
   padding-top:20px;
 }
 
-// Card homepage
+// Cards lists
 
 .card-category {
+  text-align: center;
   background-size: cover;
   background-position: center;
   height: 180px;
@@ -413,7 +414,7 @@ border-radius: 20px;
   text-decoration: none;
 }
 
-// Card bookmark
+// Card bookmarks
 
 .card-trip {
   overflow: hidden;

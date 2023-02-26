@@ -2,5 +2,5 @@
 <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.input :comment %>
   <%= f.association :movie %>
-  <%= f.submit "Submit a new bookmark", class: "btn btn-primary" %>  <%= link_to "Go back to full list", lists_path, class: "btn btn-secondary"%>
+  <%= f.submit "Submit a new bookmark", class: "btn btn-ghost1" %>  <%= link_to "Go back to full list", lists_path, class: "btn btn-ghost2"%>
 <% end %>

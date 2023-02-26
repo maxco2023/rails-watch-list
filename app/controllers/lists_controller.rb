@@ -47,9 +47,9 @@ class ListsController < ApplicationController
     end
   end
 
-  def search
-    @lists = List.find(params[:name])
-  end
+  # def search
+  #   @lists = List.find(params[:name])
+  # end
 
   private
 

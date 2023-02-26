@@ -10,44 +10,57 @@
   </head>
 
   <body>
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky">
-      <div class="container-fluid">
-      <%= link_to root_path, { class:"navbar-brand" } do%>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/575px-IMDB_Logo_2016.svg.png" />
-      <% end %>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto" >
-          <div>
-            <form class="form form-inline d-flex">
-              <input class="form-control controls mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-flat my-2 my-sm-0" type="submit">Search</button>
-            </form>
+    <header>
+
+    <%# Navbar %>
+
+      <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky">
+        <div class="container-fluid">
+          <%= link_to root_path, { class:"navbar-brand" } do%>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/575px-IMDB_Logo_2016.svg.png" />
+          <% end %>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto" >
+              <div>
+                <form class="form form-inline d-flex">
+                  <input class="form-control controls mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-flat my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </div>
+              <li class="nav-item items ps-3 pe-3 ms-2 me-2">
+                <%= link_to "Lists", lists_path, class:"nav-link" %>
+              </li>
+              <li class="nav-item items ps-3 pe-3 ms-2 me-2">
+                <%= link_to "Home", root_path, class:"nav-link" %>
+              </li>
+              <li class="nav-item items ps-3 pe-3 ms-2 me-2">
+                <%= link_to "Add a list", new_list_path, class:"nav-link" %>
+              </li>
+              <li class="nav-item dropdown pe-2">
+                <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/maxco2023" />
+              </li>
+            </ul>
           </div>
-          <li class="nav-item items ps-3 pe-3 ms-2 me-2">
-            <%= link_to "Lists", lists_path, class:"nav-link" %>
-          </li>
-          <li class="nav-item items ps-3 pe-3 ms-2 me-2">
-            <%= link_to "Home", root_path, class:"nav-link" %>
-          </li>
-          <li class="nav-item items ps-3 pe-3 ms-2 me-2">
-            <%= link_to "Add a list", new_list_path, class:"nav-link" %>
-          </li>
-          <li class="nav-item dropdown pe-2">
-              <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/maxco2023" />
-          </li>
-        </ul>
+        </div>
       </div>
-      </div>
-    </div>
 
-    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://frenchdistrict.com/californie-sud/wp-content/uploads/sites/5/2017/04/visite-studios-paramount-hollywood-cinema-films-los-angeles-une-1600x500.jpg);">
-      <div class="container">
-        <p><span data-controller="typed-js"></span></p>
-      </div>
-    </div>
+  <%# Banner %>
 
-    <div class="container">
+      <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://frenchdistrict.com/californie-sud/wp-content/uploads/sites/5/2017/04/visite-studios-paramount-hollywood-cinema-films-los-angeles-une-1600x500.jpg);">
+        <div>
+          <p><span data-controller="typed-js"></span></p>
+        </div>
+      </div>
+
+    </header>
+
+  <%# Main %>
+
+    <div class="container container1">
       <%= yield %>
+    </div>
+
+  <%# Footer %>
 
     <div class="footer">
       <div class="footer-links">
@@ -56,12 +69,11 @@
         <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
+      </div>
       <div class="footer-copyright">
         This footer is made with <i class="fas fa-heart"></i> at Le Wagon
       </div>
     </div>
 
-    </div>
   </body>
 </html>

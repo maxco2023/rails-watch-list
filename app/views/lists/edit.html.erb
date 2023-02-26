@@ -1,0 +1,7 @@
+<h1>Update list</h1>
+<%= simple_form_for [@list] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Modify my list", class: "btn btn-ghost1" %> <%= link_to "Go back to full list", lists_path, class:"btn btn-ghost2" %>
+
+<% end %>

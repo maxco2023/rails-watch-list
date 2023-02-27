@@ -1,5 +1,5 @@
 <h1><%= @list.name %></h1>
-  <div class="card">
+  <div class="cards">
     <% @list.bookmarks.each do |bookmark| %>
       <div class="card-trip">
         <img src="<%= bookmark.movie.poster_url %>" />
